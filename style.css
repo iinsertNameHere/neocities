@@ -1,0 +1,44 @@
+* {
+    --bg1: #2f222f;
+    --bg2: #421A40;
+    --fg: #faf2f2;
+}
+
+body {
+    background-color: var(--bg1);
+    color: var(--fg);
+    font-family: "Doto";
+    font-weight: 400;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes not-found-color {
+    from {color: var(--fg)}
+    to {color: #ee1919}
+}
+
+#not-found {
+    text-align: center;
+    width: 100%;
+}
+
+#not-found h1 {
+    font-size: 5rem;
+    color: var(--fg);
+    margin-bottom: 4px;
+    animation-name: not-found-color;
+    animation-duration: 0.07s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#not-found h1 img {
+    content: url("assets/redskull.gif");
+    height: 3rem;
+}
